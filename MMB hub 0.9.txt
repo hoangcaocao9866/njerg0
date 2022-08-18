@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("MMB HUB", "Midnight")
-local Tab = Window:NewTab("SBR")
+local Tab = Window:NewTab("CHON LAY VI EN")
 local Section = Tab:NewSection("Fling")
 local myPart = Instance.new("Part")
 local osPart = Instance.new("Part")
