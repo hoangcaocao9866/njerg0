@@ -1,8 +1,8 @@
+getgenv().autofl = false
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("MMB HUB", "Midnight")
 local Tab = Window:NewTab("SBR")
 local Section = Tab:NewSection("Fling")
-local myPart = Instance.new("Part")
 
 local osPart = Instance.new("Part")
 osPart.Name = ("oneshot")
@@ -13,7 +13,6 @@ osPart.Position = Vector3.new(5000000, 10000, 5000000) -- (X, Y, Z)
 osPart.Parent = game.Workspace
 
 local myPart = Instance.new("Part")
-
 myPart.Name = ("yomama")
 myPart.Transparency = 0
 myPart.Anchored = true
@@ -384,4 +383,44 @@ Section:NewButton("TP to player body (invis exploiters)", "TP you to player", fu
 	ptPart.CFrame = game:GetService("Players")[tpplat].Character.Head.CFrame
 	ptPart.Parent = game.Workspace
 		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[tpplat].Character.Head.CFrame * CFrame.new(0, -5, 0)
+end)
+local Tab = Window:NewTab("Auto SBR")
+local Section = Tab:NewSection("Auto Fling")
+
+
+Section:NewButton("Enable Auto Fling SBR", "Auto Fling SBR", function()
+    getgenv().autofl = true
+while getgenv().autofl == true do
+    game:GetService("Players").LocalPlayer.Name = ("Pulled")
+    for _,v in pairs(game:GetService("Players"):GetChildren()) do
+        if v.Name ~= ("Pulled") then
+        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new (0, 5, 0)
+        wait(0.1)
+        local A_1 = "InputBegan"
+        local A_2 = 
+        {
+            ["Input"] = Enum.KeyCode.Y
+        }
+        local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+        Event:FireServer(A_1, A_2)
+        local A_1 = "InputEnded"
+        local A_2 = 
+        {
+            ["Input"] = Enum.KeyCode.Y
+        }
+        local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+        Event:FireServer(A_1, A_2)
+        
+        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").oneshot.CFrame * CFrame.new(0, 10, 0)
+        wait(1.5)
+        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
+        wait(0.1)
+        v.Name = ("Pulled")
+    wait(25)
+    end
+    end
+    end
+end)
+Section:NewButton("Enable Auto Fling SBR", "Auto Fling SBR", function()
+getgenv().autofl = false
 end)
