@@ -1,8 +1,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("MMB HUB", "Midnight")
-local Tab = Window:NewTab("CHON LAY VI EN")
+local Tab = Window:NewTab("SBR")
 local Section = Tab:NewSection("Fling")
 local myPart = Instance.new("Part")
+
 local osPart = Instance.new("Part")
 osPart.Name = ("oneshot")
 osPart.Transparency = 0
@@ -10,6 +11,7 @@ osPart.Anchored = true
 osPart.Size = Vector3.new(100, 5, 100)
 osPart.Position = Vector3.new(5000000, 10000, 5000000) -- (X, Y, Z)
 osPart.Parent = game.Workspace
+
 local myPart = Instance.new("Part")
 
 myPart.Name = ("yomama")
@@ -95,7 +97,6 @@ wait(0.1)
 game:GetService("Workspace").oldcfame:Destroy()
 end)
 Section:NewKeybind("Fling Nearest Keybind", "KeybindInfo", Enum.KeyCode.U, function()
-	game:GetService("Workspace").oldsf:Destroy()
 	local ofPart = Instance.new("Part")
 	ofPart.Name = ("oldcfame")
 	ofPart.Transparency = 1
@@ -333,16 +334,19 @@ while getgenv().Toggled == true do
 		faPart.Transparency = 1
 		faPart.Anchored = true
 		faPart.Size = Vector3.new(1, 1, 1)
-		faPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
+		faPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 50, 0)
 		faPart.Parent = game.Workspace
-
-	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 10, 10)
-	 wait(0.1)
-	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(10, 20, 0)
-	 wait(0.1)
-	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 10, 20)
+     wait(0.1)
 	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
-     wait(1)
+     wait(0.5)
+	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
+     wait(0.5)
+	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
+     wait(0.5)
+	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
+     wait(0.5)
+	 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").yomama.CFrame * CFrame.new(0, 10, 0)
+     wait(0.5)
 local A_1 = "InputBegan"
 local A_2 = 
 {
