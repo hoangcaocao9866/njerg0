@@ -421,6 +421,6 @@ while getgenv().autofl == true do
     end
     end
 end)
-Section:NewButton("Enable Auto Fling SBR", "Auto Fling SBR", function()
+Section:NewButton("Disable Auto Fling SBR", "Auto Fling SBR", function()
 getgenv().autofl = false
 end)
