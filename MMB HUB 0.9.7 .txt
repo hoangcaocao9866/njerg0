@@ -501,8 +501,8 @@ local A_2 = "Toggle"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteFunction
 Event:InvokeServer(A_1, A_2)
 wait(1)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.StandAttach.Parent = game:GetService("Workspace").autofarming
 end
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.StandAttach.Parent = game:GetService("Workspace").autofarming
 wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Help Giorno by Defeating Security Guards") then
 local A_1 = "EndDialogue"
@@ -852,6 +852,8 @@ local A_2 = "Toggle"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteFunction
 Event:InvokeServer(A_1, A_2)
 end
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.StandAttach.Parent = game:GetService("Workspace").autofarming
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value > 24 and game:GetService("Players").LocalPlayer.PlayerStats.Level.Value < 30 then
 getgenv().autofarmlv = true
 while getgenv().autofarmlv == true do
