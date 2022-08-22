@@ -1011,3 +1011,15 @@ Section:NewButton("disable auto farm", "disable auto farm", function()
 game:GetService("Workspace").stpar:Destroy()
 game:GetService("Workspace").autofarming:Destroy()
 end)
+Section:NewButton("Prestige", "Prestige", function()
+wait(0.1)
+    local A_1 = "EndDialogue"
+    local A_2 = 
+    {
+        ["NPC"] = "Prestige", 
+        ["Option"] = "Option1", 
+        ["Dialogue"] = "Dialogue2"
+    }
+    local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+    Event:FireServer(A_1, A_2)
+end)
