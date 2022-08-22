@@ -388,16 +388,16 @@ end)
 Section:NewButton("Delete Part in tp body", "TP you to player", function()
 game:GetService("Workspace").isnveri:Destroy()
 end)
-local Tab = Window:NewTab("Auto Farm")
-local Section = Tab:NewSection("auto farm")
-Section:NewButton("auto farm story", "automatic story farm, REQ: Any Human Stand + 5k money", function()
+local Tab = Window:NewTab("AUTO STORY")
+local Section = Tab:NewSection("auto farm story")
+Section:NewButton("auto farm story", "fully automatic story farm, REQ: Any Human Stand + 5k money + do giorno first quest and get the suitcase", function()
 local osPart = Instance.new("Part")
-owtPart.Name = ("autofarming")
-owtPart.Transparency = 1
-owtPart.Anchored = true
-owtPart.Size = Vector3.new(1, 1, 1)
-owtPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0)
-owtPart.Parent = game.Workspace
+osPart.Name = ("autofarming")
+osPart.Transparency = 1
+osPart.Anchored = true
+osPart.Size = Vector3.new(1, 1, 1)
+osPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0)
+osPart.Parent = game.Workspace
 
 local ccaPart = Instance.new("Part")
 ccaPart.Name = ("stpar")
@@ -407,8 +407,124 @@ ccaPart.Size = Vector3.new(10, 1, 10)
 ccaPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0)
 ccaPart.Parent = game.Workspace
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.StandAttach.Parent = game:GetService("Workspace").autofarming
+wait(0.5)
+if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value == 1 then
+local A_1 = "EndDialogue"
+local A_2 = 
+{
+	["NPC"] = "Storyline #1", 
+	["Option"] = "Option1", 
+	["Dialogue"] = "Dialogue2"
+}
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_1, A_2)
+end
+wait(0.5)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Help Giorno by Defeating Security Guards") then
+getgenv().autofar1 = true
+while getgenv().autofar1 == true do
 wait(0.1)
-if game:GetService("Players").LocalPlayer.PlayerStats.Quest == ("Return Koichi's Suitcase") then
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Help Giorno by Defeating Security Guards") then
+getgenv().au1 = true
+while getgenv().au1 == true do
+wait(0.0000000000000000000001)
+game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Security Guard"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+local A_11 = "Attack"
+local A_12 = "m1"
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_11, A_12)
+if game:GetService("Workspace").Living["Security Guard"].Health.Value == 0 then
+getgenv().au1 = false
+game:GetService("Workspace").Living["Security Guard"]:Destroy()
+wait(2)
+getgenv().au2 = true
+while getgenv().au2 == true do
+wait(0.0000000000000000000001)
+game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Security Guard"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+local A_11 = "Attack"
+local A_12 = "m1"
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_11, A_12)
+if game:GetService("Workspace").Living["Security Guard"].Health.Value == 0 then
+getgenv().au2 = false
+game:GetService("Workspace").Living["Security Guard"]:Destroy()
+wait(2)
+getgenv().au3 = true
+while getgenv().au3 == true do
+wait(0.0000000000000000000001)
+game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Security Guard"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+local A_11 = "Attack"
+local A_12 = "m1"
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_11, A_12)
+if game:GetService("Workspace").Living["Security Guard"].Health.Value == 0 then
+getgenv().au3 = false
+game:GetService("Workspace").Living["Security Guard"]:Destroy()
+wait(2)
+getgenv().au4 = true
+while getgenv().au4 == true do
+wait(0.0000000000000000000001)
+game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Security Guard"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+local A_11 = "Attack"
+local A_12 = "m1"
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_11, A_12)
+if game:GetService("Workspace").Living["Security Guard"].Health.Value == 0 then
+getgenv().au4 = false
+game:GetService("Workspace").Living["Security Guard"]:Destroy()
+wait(2)
+getgenv().au5 = true
+while getgenv().au5 == true do
+wait(0.0000000000000000000001)
+game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Security Guard"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+local A_11 = "Attack"
+local A_12 = "m1"
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_11, A_12)
+if game:GetService("Workspace").Living["Security Guard"].Health.Value == 0 then
+getgenv().au5 = false
+game:GetService("Workspace").Living["Security Guard"]:Destroy()
+wait(1.5)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Help Giorno by Defeating Security Guards") then
+getgenv().autofar1 = false
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+wait(1)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Help Giorno by Defeating Security Guards") then
+local A_1 = "EndDialogue"
+local A_2 = 
+{
+	["NPC"] = "Storyline #1", 
+	["Option"] = "Option1", 
+	["Dialogue"] = "Dialogue6"
+}
+local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
+Event:FireServer(A_1, A_2)
+end
+wait(2)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Return Koichi's Suitcase") then
 local A_3 = "EndDialogue"
 local A_4 = 
 {
@@ -429,13 +545,15 @@ local A_6 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_5, A_6)
 end
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Leaky Eye Luca") then
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Leaky Eye Luca"].HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Leaky Eye Luca"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 wait(0.1)
 getgenv().autolek = true
 while getgenv().autolek == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Leaky Eye Luca"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -446,7 +564,7 @@ getgenv().autolek = false
 end
 end
 end
-wait(0.1)
+wait(1)
 if getgenv().autolek == false then
 local A_9 = "EndDialogue"
 local A_10 = 
@@ -458,25 +576,27 @@ local A_10 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_9, A_10)
 end
-wait(0.1)
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Bucciarati") then
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Bucciarati"].HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Bucciarati"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 wait(0.1)
-getgenv().autobru = true
-while getgenv().autobru == true do
+getgenv().autobrun = true
+while getgenv().autobrun == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Bucciarati"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_11, A_12)
 if game:GetService("Workspace").Living.Bucciarati.Health.Value == 0 then
-getgenv().autobru = false
+getgenv().autobrun = false
 end
 end
 end
-if getgenv().autobru == false then
+wait(2)
+if getgenv().autobrun == false then
     local A_1 = "EndDialogue"
     local A_2 = 
     {
@@ -487,7 +607,7 @@ if getgenv().autobru == false then
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_1, A_2)
 end
-wait(0.1)
+wait(2)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Give Giorno The Lighter") then
     local A_1 = "EndDialogue"
     local A_2 = 
@@ -499,7 +619,7 @@ if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Give Gior
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_1, A_2)
 end
-wait(0.1)
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Fugo") then
     local A_1 = "EndDialogue"
     local A_2 = 
@@ -511,7 +631,7 @@ if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Fugo
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_1, A_2)
 end
-wait(0.1)
+wait(0.5)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Mista") then
     local A_1 = "EndDialogue"
     local A_2 = 
@@ -523,7 +643,7 @@ if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Mist
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_1, A_2)
 end
-wait(0.1)
+wait(0.5)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Narancia") then
     local A_1 = "EndDialogue"
     local A_2 = 
@@ -535,7 +655,7 @@ if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Nara
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_1, A_2)
 end
-wait(0.1)
+wait(0.5)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Abbacchio") then
     local A_1 = "EndDialogue"
     local A_2 = 
@@ -557,6 +677,7 @@ if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Meet Abba
     local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
     Event:FireServer(A_3, A_4)
 end
+wait(0.5)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Collect $5,000 To Cover For Popo's Real Fortune") then
 local A_1 = "EndDialogue"
 local A_2 = 
@@ -568,13 +689,15 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 end
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Fugo And His Purple Haze") then
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Fugo"].HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Fugo"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 wait(0.1)
 getgenv().autofug = true
 while getgenv().autofug == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Fugo"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -597,13 +720,15 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 end
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Pesci") then
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Pesci"].HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Pesci"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 wait(0.1)
 getgenv().autopep = true
 while getgenv().autopep == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Pesci"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -625,7 +750,7 @@ local A_2 =
 }
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
-wait(0.1)
+wait(1)
 local A_1 = "EndDialogue"
 local A_2 = 
 {
@@ -636,13 +761,15 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 end
-if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Pesci") then
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Ghiaccio"].HumanoidRootPart.CFrame * CFrame.new(0, 20, 0)
+wait(1)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Ghiaccio") then
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Ghiaccio"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 wait(0.1)
 getgenv().autoghi = true
 while getgenv().autoghi == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Ghiaccio"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -664,7 +791,7 @@ local A_2 =
 }
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
-wait(0.1)
+wait(1)
 local A_1 = "EndDialogue"
 local A_2 = 
 {
@@ -675,6 +802,7 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 end
+wait(3)
 if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Defeat Diavolo") then
 game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Diavolo"].HumanoidRootPart.CFrame * CFrame.new(0, 125, 0)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
@@ -692,7 +820,7 @@ getgenv().autodeo = false
 end
 end
 end
-wait(0.1)
+wait(2)
 if getgenv().autodeo == false then
 local A_1 = "EndDialogue"
 local A_2 = 
@@ -704,18 +832,12 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 wait(10)
+if game:GetService("Players").LocalPlayer.PlayerStats.Quest.Value == ("Storyline Completed") then
 game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
 end
-wait(1)
-game:GetService("Workspace").stpar:Destroy()
-game:GetService("Workspace").autofarming:Destroy()
+end
 end)
-Section:NewButton("Disable Auto Farm Story", "Disable Auto Farm Story", function()
-game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
-game:GetService("Workspace").stpar:Destroy()
-game:GetService("Workspace").autofarming:Destroy()
-end)
-Section:NewButton("Auto Farm LVL", "Auto Farm LVL", function()
+Section:NewButton("auto farm LVL", "auto farm LVL", function()
 local osPart = Instance.new("Part")
 osPart.Name = ("autofarming")
 osPart.Transparency = 1
@@ -732,10 +854,10 @@ ccaPart.Size = Vector3.new(10, 1, 10)
 ccaPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 100, 0)
 ccaPart.Parent = game.Workspace
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.StandAttach.Parent = game:GetService("Workspace").autofarming
-wait(0.1)
+wait(1)
 
-if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value < 30 then
-getgenv().autofarmlv25 = true
+if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value > 24 and game:GetService("Players").LocalPlayer.PlayerStats.Level.Value < 30 then
+getgenv().autofarmlv = true
 while getgenv().autofarmlv == true do
 wait(0.1)
 local A_1 = "EndDialogue"
@@ -748,12 +870,12 @@ local A_2 =
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
 wait(0.1)
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 7, 0)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 getgenv().auto1 = true
 while getgenv().auto1 == true do
 wait(0.0000000000000000000001)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 local A_11 = "Attack"
 local A_12 = "m1"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
@@ -761,12 +883,12 @@ Event:FireServer(A_11, A_12)
 if game:GetService("Workspace").Living.Vampire.Health.Value == 0 then
 getgenv().auto1 = false
 wait(2)
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 7, 0)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 getgenv().auto2 = true
 while getgenv().auto2 == true do
 wait(0.0000000000000000000001)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 local A_11 = "Attack"
 local A_12 = "m1"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
@@ -774,12 +896,12 @@ Event:FireServer(A_11, A_12)
 if game:GetService("Workspace").Living.Vampire.Health.Value == 0 then
 getgenv().auto2 = false
 wait(2)
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 7, 0)
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 getgenv().auto3 = true
 while getgenv().auto3 == true do
 wait(0.0000000000000000000001)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Vampire"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").autofarming.CFrame * CFrame.new(0, 7, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 local A_11 = "Attack"
 local A_12 = "m1"
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
@@ -798,7 +920,7 @@ end
 end
 end
 end
-wait(5)
+wait(10)
 if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value > 29 and game:GetService("Players").LocalPlayer.PlayerStats.Level.Value < 35 then
 getgenv().autofarmlv30 = true
 while getgenv().autofarmlv30 == true do
@@ -812,13 +934,18 @@ local A_2 =
 }
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
-
 wait(0.1)
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Dio"].HumanoidRootPart.CFrame * CFrame.new(0, 15, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Dio"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(0.1)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+wait(0.1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(1.5)
 getgenv().autodio = true
 while getgenv().autodio == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Dio"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -827,6 +954,8 @@ Event:FireServer(A_11, A_12)
 if game:GetService("Workspace").Living.Dio.Health.Value == 0 then
 getgenv().autodio = false
 wait(1.5)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 1000, 0)
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value == 35 then
 getgenv().autofarmlv30 = false
 end
@@ -834,7 +963,7 @@ end
 end
 end
 end
-wait(5)
+wait(10)
 if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value > 34 and game:GetService("Players").LocalPlayer.PlayerStats.Level.Value < 50 then
 getgenv().autofarmlv35 = true
 while getgenv().autofarmlv35 == true do
@@ -848,13 +977,18 @@ local A_2 =
 }
 local Event = game:GetService("Players").LocalPlayer.Character.RemoteEvent
 Event:FireServer(A_1, A_2)
-
 wait(0.1)
-game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Jotaro"].HumanoidRootPart.CFrame * CFrame.new(0, 15, 0)
+game:GetService("Workspace").stpar.CFrame = game:GetService("Workspace").Living["Jotaro"].HumanoidRootPart.CFrame * CFrame.new(0, 75, 0)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(0.1)
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
+wait(0.1)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(1.5)
 getgenv().autojoe = true
 while getgenv().autojoe == true do
 wait(0.0000000000000000000001)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").stpar.CFrame * CFrame.new(0, 10, 0)
 game:GetService("Workspace").autofarming.CFrame = game:GetService("Workspace").Living["Jotaro"].HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
 local A_11 = "Attack"
 local A_12 = "m1"
@@ -863,6 +997,8 @@ Event:FireServer(A_11, A_12)
 if game:GetService("Workspace").Living.Jotaro.Health.Value == 0 then
 getgenv().autojoe = false
 wait(1.5)
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 1000, 0)
+wait(1)
 if game:GetService("Players").LocalPlayer.PlayerStats.Level.Value == 50 then
 getgenv().autofarmlv35 = false
 end
@@ -871,8 +1007,7 @@ end
 end
 end
 end)
-Section:NewButton("Disable Auto Farm LVL", "Disable Auto Farm LVL", function()
-game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+Section:NewButton("disable auto farm", "disable auto farm", function()
 game:GetService("Workspace").stpar:Destroy()
 game:GetService("Workspace").autofarming:Destroy()
 end)
