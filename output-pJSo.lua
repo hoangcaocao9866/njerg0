@@ -1030,7 +1030,7 @@ wait(0.1)
 game:GetService("Workspace").stpar:Destroy()
 game:GetService("Workspace").autofarming:Destroy()
 end)
-Section:NewButton("ButtonText", "ButtonInfo", function()
+Section:NewButton("Auto Farm Cmoon", "Auto Farm Cmoon", function()
 
 local osPart = Instance.new("Part")
 osPart.Name = ("autofarming")
